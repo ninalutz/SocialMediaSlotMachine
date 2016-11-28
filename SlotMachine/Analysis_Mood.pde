@@ -1,16 +1,16 @@
-color l1 = color(255, 255, 255);
-color l2 = color(255, 255, 255);
-color l3 = color(255, 255, 255);
+color l1 = color(random(255), random(255), random(255));
+color l2 = color(random(255), random(255), random(255));
+color l3 =color(random(255), random(255), random(255));
 
-color c1 = color(255, 255, 255);
-color c2 = color(255, 255, 255);
-color c3 = color(255, 255, 255);
+color c1 = color(random(255), random(255), random(255));
+color c2 = color(random(255), random(255), random(255));
+color c3 = color(random(255), random(255), random(255));
 
-color r1 = color(255, 255, 255);
-color r2 = color(255, 255, 255);
-color r3 = color(255, 255, 255);
+color r1 = color(random(255), random(255), random(255));
+color r2 = color(random(255), random(255), random(255));
+color r3 = color(random(255), random(255), random(255));
 
-boolean analyzing = true;
+boolean analyzing = false;
 
 void moodcolors(){
   if(millis() % 5 == 0 && analyzing){
