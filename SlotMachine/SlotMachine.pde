@@ -8,7 +8,6 @@ void draw(){
   
 background(255);
 //lever 
-
 if(!analyzing){
 fill(255);
 rect(800, 200, 20, 250);
@@ -58,10 +57,17 @@ fill(255);
 
 moodcolors();
 
+fill(0);
+text("Press space to pull lever", 10, 30);
+
+fill(255);
+
 }
 
 void keyPressed(){
 if (key == ' '){
+  Network.clear();
+  query_twitter();
   analyzing = !analyzing;
   thing = "";
 }
