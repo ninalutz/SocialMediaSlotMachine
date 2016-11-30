@@ -1,14 +1,13 @@
-
 void query_twitter(){
   ConfigurationBuilder cb = new ConfigurationBuilder();
-cb.setOAuthConsumerKey("rfKF162CbQNzNJuGYmFP47Jn1");
-cb.setOAuthConsumerSecret("GXTMXj1zl2KYLrNGlhAzpkVoaP5AjZ0VC1X3N8m3sbEW1zDpUx");
-cb.setOAuthAccessToken("3105596274-uwmPZ2dudRlYAFfBEChtuyhSPLerzRfCIEBpd5S");
-cb.setOAuthAccessTokenSecret("fyXJaBcdIrD6UAA7kEv2anV05n1Gja5S9OtE4FsrYcy8V");
+cb.setOAuthConsumerKey("NgUSAWhzcQ5MsnQFLfth1X1mn");
+cb.setOAuthConsumerSecret("wxeUCrf2vrSQPcuuSjw0HUKau0kawrpLzR2bZAtjqT7cm1ZbEp");
+cb.setOAuthAccessToken("3105596274-5AaNAH588G0AfK8sWTcdzBamKVFA8t2AQ5U7WeJ");
+cb.setOAuthAccessTokenSecret("s1Ony5HuHZkfFN4Qd5OSPbKias7iDWNwWDss8Xdtj05g4");
   Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 
  try { 
-    Paging paging = new Paging(1, 10); 
+    Paging paging = new Paging(1, 100); 
     ResponseList<Status> statuses = twitter.getHomeTimeline(paging); 
     for (Status status : statuses) { 
       println(status.getUser().getName() + ":" + status.getText());
@@ -19,4 +18,3 @@ cb.setOAuthAccessTokenSecret("fyXJaBcdIrD6UAA7kEv2anV05n1Gja5S9OtE4FsrYcy8V");
   }
   analyzing = false;
 }
-
