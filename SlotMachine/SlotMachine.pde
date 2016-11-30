@@ -1,8 +1,7 @@
 void setup(){
 size(900, 800);
 init_colors();
-//query_twitter();
-//analyze_Network();
+init_Lexicon_Map();
 }
 
 void draw(){
