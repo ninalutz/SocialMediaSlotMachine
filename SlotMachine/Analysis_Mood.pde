@@ -17,7 +17,7 @@ color[] colarray = new color[8];
 void init_colors(){
 color anger = color(255, 0, 0);
 color disgust = color(230, 0, 250);
-color saddness = color(0, 18, 234);
+color sadness = color(0, 18, 234);
 color trust = color(0, 255, 154);
 color fear = color(0, 117, 63);
 color surprise = color(0, 247, 255);
@@ -26,7 +26,7 @@ color joy = color(255, 255, 0);
 
 colarray[0] = anger;
 colarray[1] = disgust;
-colarray[2] = saddness; 
+colarray[2] = sadness; 
 colarray[3] = trust;
 colarray[4] = fear;
 colarray[5] = surprise;
@@ -48,6 +48,15 @@ void moodcolors(){
   }
   
   if(millis() % 40 == 0 && analyzing){
+    emotion_joy = 0;
+    emotion_anger = 0;
+    emotion_anticipation = 0;
+    emotion_fear = 0;
+    emotion_trust = 0;
+    emotion_surprise = 0;
+    emotion_sadness = 0; 
+    emotion_disgust = 0;
+    Network.clear();
     query_twitter();
     analyze_Network();
     analyzing = false;

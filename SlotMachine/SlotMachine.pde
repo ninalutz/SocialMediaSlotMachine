@@ -1,7 +1,6 @@
 void setup(){
 size(900, 800);
 init_colors();
-init_Lexicon_Map();
 }
 
 void draw(){
@@ -52,7 +51,7 @@ fill(255);
 //read out 
 rect(175, 500, 450, 250);
 fill(0);
-text(readouttemp, 190, 520, 410, 250);
+text(thing, 190, 520, 410, 250);
 fill(255);
 
 moodcolors();
