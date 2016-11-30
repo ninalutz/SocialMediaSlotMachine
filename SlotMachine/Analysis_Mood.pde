@@ -56,9 +56,8 @@ void moodcolors(){
     emotion_surprise = 0;
     emotion_sadness = 0; 
     emotion_disgust = 0;
-    Network.clear();
-    query_twitter();
     analyze_Network();
+    //Network.clear();
     analyzing = false;
   }
 

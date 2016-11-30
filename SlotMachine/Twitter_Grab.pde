@@ -2,10 +2,10 @@ ResponseList<Status> statuses;
 String readouttemp = "    ";
 void query_twitter(){
   ConfigurationBuilder cb = new ConfigurationBuilder();
-cb.setOAuthConsumerKey("rfKF162CbQNzNJuGYmFP47Jn1");
-cb.setOAuthConsumerSecret("GXTMXj1zl2KYLrNGlhAzpkVoaP5AjZ0VC1X3N8m3sbEW1zDpUx");
-cb.setOAuthAccessToken("3105596274-uwmPZ2dudRlYAFfBEChtuyhSPLerzRfCIEBpd5S");
-cb.setOAuthAccessTokenSecret("fyXJaBcdIrD6UAA7kEv2anV05n1Gja5S9OtE4FsrYcy8V");
+cb.setOAuthConsumerKey("xgRlTOqCFvOTXcLkXDJ9grY1c");
+cb.setOAuthConsumerSecret("ElUdi1DaolQ733rpqIgnh3NB0yDwQjao9j3LDdxbh6X2Uw7etL");
+cb.setOAuthAccessToken("3105596274-fKf8s7acUB5OOmamOmssDoHbsJ0DHASmgCVUH0d");
+cb.setOAuthAccessTokenSecret("vdtakNa7zgZE59GA3VXfAWrvUy1nWoWtRtAOQDo68YRuB");
   Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 
  try { 

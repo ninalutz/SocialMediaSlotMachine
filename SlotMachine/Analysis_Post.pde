@@ -33,27 +33,35 @@ void analyze_Network(){
          json.getJSONObject(Network.get(i).words[j]);
          
          Network.get(i)._joy+=json.getJSONObject(Network.get(i).words[j]).getInt("joy");
+         Network.get(i).feelings[7] += json.getJSONObject(Network.get(i).words[j]).getInt("joy");
          emotion_joy += json.getJSONObject(Network.get(i).words[j]).getInt("joy");
          
          Network.get(i)._anger+=json.getJSONObject(Network.get(i).words[j]).getInt("anger");
+         Network.get(i).feelings[0] += json.getJSONObject(Network.get(i).words[j]).getInt("anger");
          emotion_anger += json.getJSONObject(Network.get(i).words[j]).getInt("anger");
          
          Network.get(i)._anticipation+=json.getJSONObject(Network.get(i).words[j]).getInt("anticipation");
+         Network.get(i).feelings[6] += json.getJSONObject(Network.get(i).words[j]).getInt("anticipation");
          emotion_anticipation += json.getJSONObject(Network.get(i).words[j]).getInt("anticipation");
          
          Network.get(i)._sadness+=json.getJSONObject(Network.get(i).words[j]).getInt("sadness");
+         Network.get(i).feelings[2] += json.getJSONObject(Network.get(i).words[j]).getInt("sadness");
          emotion_sadness += json.getJSONObject(Network.get(i).words[j]).getInt("sadness");
          
          Network.get(i)._fear+=json.getJSONObject(Network.get(i).words[j]).getInt("fear");
+         Network.get(i).feelings[4] += json.getJSONObject(Network.get(i).words[j]).getInt("fear");
          emotion_fear += json.getJSONObject(Network.get(i).words[j]).getInt("fear");
          
          Network.get(i)._trust+=json.getJSONObject(Network.get(i).words[j]).getInt("trust");
+         Network.get(i).feelings[3] += json.getJSONObject(Network.get(i).words[j]).getInt("trust");
          emotion_trust += json.getJSONObject(Network.get(i).words[j]).getInt("trust");
          
          Network.get(i)._disgust+=json.getJSONObject(Network.get(i).words[j]).getInt("disgust");
+         Network.get(i).feelings[1] += json.getJSONObject(Network.get(i).words[j]).getInt("disgust");
          emotion_disgust += json.getJSONObject(Network.get(i).words[j]).getInt("disgust");
         
          Network.get(i)._surprise+=json.getJSONObject(Network.get(i).words[j]).getInt("surprise");
+         Network.get(i).feelings[5] += json.getJSONObject(Network.get(i).words[j]).getInt("surprise");
          emotion_surprise += json.getJSONObject(Network.get(i).words[j]).getInt("surprise");
          
        }
@@ -90,14 +98,14 @@ void analyze_Network(){
     l1 = colarray[h2.get(test[2])];
     
     int max = Network.get(0).feelings[h2.get(test[0])];
-    for (int k = 0; k<Network.size(); k++){
+        for (int k = 0; k<Network.size(); k++){
        int current = Network.get(k).feelings[h2.get(test[0])];
        if (current > max){
          max = current;
          tweet_to_ret = k;
        }
     }
-    
+ 
     for(int i = 0; i<Network.get(tweet_to_ret).words.length; i++){
        thing += " " + Network.get(tweet_to_ret).words[i];
     }
