@@ -1,7 +1,7 @@
 void setup(){
 size(900, 800);
 init_colors();
-init_Twitter();
+query_twitter();
 }
 
 void draw(){
