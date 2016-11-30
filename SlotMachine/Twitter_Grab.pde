@@ -1,16 +1,24 @@
+ResponseList<Status> statuses;
+String readouttemp = "    ";
 void query_twitter(){
   ConfigurationBuilder cb = new ConfigurationBuilder();
-cb.setOAuthConsumerKey("NgUSAWhzcQ5MsnQFLfth1X1mn");
-cb.setOAuthConsumerSecret("wxeUCrf2vrSQPcuuSjw0HUKau0kawrpLzR2bZAtjqT7cm1ZbEp");
-cb.setOAuthAccessToken("3105596274-5AaNAH588G0AfK8sWTcdzBamKVFA8t2AQ5U7WeJ");
-cb.setOAuthAccessTokenSecret("s1Ony5HuHZkfFN4Qd5OSPbKias7iDWNwWDss8Xdtj05g4");
+cb.setOAuthConsumerKey("bMIlPcdEIMVA3rM4HwsJDBeJR");
+cb.setOAuthConsumerSecret("UsBuiEteRS8GjDaybvWjDjoi2kaOdxPPqtTFZnPAZ8MNVajlPh");
+cb.setOAuthAccessToken("3105596274-O6JDvyTNwBaTnJNV4u6xoFIRpBCnk4QenCHazLK");
+cb.setOAuthAccessTokenSecret("8e3ZGWEM0vE5ZxQtuLAssaqbX66GRt4lQbrl8xRYReMnP");
   Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 
  try { 
-    Paging paging = new Paging(1, 100); 
-    ResponseList<Status> statuses = twitter.getHomeTimeline(paging); 
+    Paging paging = new Paging(1, 10); 
+    statuses = twitter.getHomeTimeline(paging); 
+    String[] input;
+    input = "hello there".split(" ");
     for (Status status : statuses) { 
       println(status.getUser().getName() + ":" + status.getText());
+       readouttemp = status.getUser().getName() + ":" + status.getText();
+       input = status.getText().split(" ");
+       merp Merp = new merp(input);
+       Network.add(Merp);
     }
   } 
   catch(TwitterException te) { 

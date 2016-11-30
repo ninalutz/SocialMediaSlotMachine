@@ -46,5 +46,11 @@ void moodcolors(){
     r2 = colarray[int(random(0, 8))];
     r3 = colarray[int(random(0, 8))];
   }
+  
+  if(millis() % 40 == 0 && analyzing){
+    query_twitter();
+    analyze_Network();
+    analyzing = false;
+  }
 
 }
