@@ -8,19 +8,15 @@ cb.setOAuthAccessTokenSecret("fyXJaBcdIrD6UAA7kEv2anV05n1Gja5S9OtE4FsrYcy8V");
 
 Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 
-
-Query query = new Query("#OWS");
- 
-try {
-  QueryResult result = twitter.search(query);
-  println(result);
-}
-catch (TwitterException te) {
-  println("Couldn't connect: " + te);
-};
-
-}
-
-void query_Twitter(){
-  
+ try { 
+    println("10 Twitter timeline"); 
+    Paging paging = new Paging(1, 10); 
+    ResponseList<Status> statuses = twitter.getHomeTimeline(paging); 
+    for (Status status : statuses) { 
+      println(status.getUser().getName() + ":" + status.getText());
+    }
+  } 
+  catch(TwitterException te) { 
+    println("Couldn''t connect: " + te);
+  }
 }
