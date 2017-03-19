@@ -94,7 +94,6 @@ void analyze_Network(){
     println(hm, test[0], test[1], test[2]);
     
     c1 = colarray[h2.get(test[0])];
-    println(h2.get(test[0]));
     r1 = colarray[h2.get(test[1])];
     l1 = colarray[h2.get(test[2])];
     

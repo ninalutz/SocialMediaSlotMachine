@@ -52,7 +52,8 @@ fill(255);
 rect(175, 500, 450, 250);
 fill(0);
 textSize(20);
-text(thing, 190, 520, 410, 250);
+text(thing, 190, 520, 410, 400);
+//println(thing);
 fill(255);
 
 moodcolors();

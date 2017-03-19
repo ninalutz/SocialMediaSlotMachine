@@ -9,7 +9,7 @@ cb.setOAuthAccessTokenSecret("vdtakNa7zgZE59GA3VXfAWrvUy1nWoWtRtAOQDo68YRuB");
   Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 
  try { 
-    Paging paging = new Paging(1, 20); 
+    Paging paging = new Paging(1, 50); 
     statuses = twitter.getHomeTimeline(paging); 
     String[] input;
     input = "hello there".split(" ");
